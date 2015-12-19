@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Ants</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="builders">Stavitelé</string>
+    <string name="soldiers">Vojáci</string>
+    <string name="mages">Mágové</string>
+    <string name="bricks">Cihly</string>
+    <string name="weapons">Zbraně</string>
+    <string name="crystals">Krystaly</string>
+    <string name="castle">Hrad</string>
+    <string name="wall">Hradba</string>
+    <string name="title">Mravenci</string>
+    <string name="play_new_game">Začít novou hru</string>
+
+</resources>
