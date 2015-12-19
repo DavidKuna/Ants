@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="country_arrays">
+        <item>Čeština</item>
+        <item>English</item>
+    </string-array>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="app_name">Ants</string>
     <string name="bricks">Cihly</string>
     <string name="builders">Stavitelé</string>
     <string name="castle">Hrad</string>
+    <string name="country_prompt">Vyberte zemi</string>
     <string name="crystals">Krystaly</string>
     <string name="hello_world">Hello world!</string>
+    <string name="language">Jazyk</string>
     <string name="mages">Mágové</string>
     <string name="menu_settings">Settings</string>
     <string name="play_new_game">Začít novou hru</string>
+    <string name="settings">Nastavení</string>
     <string name="soldiers">Vojáci</string>
     <string name="title">Mravenci</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
     <string name="wall">Hradba</string>
     <string name="weapons">Zbraně</string>
     <style name="AppTheme" parent="android:Theme.Light"/>
