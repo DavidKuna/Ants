@@ -176,17 +176,17 @@
                     "startLine": 19,
                     "startColumn": 4,
                     "startOffset": 806,
-                    "endColumn": 46,
-                    "endOffset": 848
+                    "endColumn": 55,
+                    "endOffset": 857
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 835,
-                        "endColumn": 46,
-                        "endOffset": 877
+                        "startOffset": 882,
+                        "endColumn": 55,
+                        "endOffset": 933
                     }
                 }
             },
@@ -194,9 +194,9 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 853,
-                    "endColumn": 43,
-                    "endOffset": 892
+                    "startOffset": 862,
+                    "endColumn": 46,
+                    "endOffset": 904
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -206,9 +206,9 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 897,
-                    "endColumn": 42,
-                    "endOffset": 935
+                    "startOffset": 909,
+                    "endColumn": 43,
+                    "endOffset": 948
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -218,9 +218,9 @@
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 940,
-                    "endColumn": 60,
-                    "endOffset": 996
+                    "startOffset": 953,
+                    "endColumn": 42,
+                    "endOffset": 991
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -230,9 +230,9 @@
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1001,
-                    "endColumn": 68,
-                    "endOffset": 1065
+                    "startOffset": 996,
+                    "endColumn": 60,
+                    "endOffset": 1052
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -242,9 +242,9 @@
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 1070,
-                    "endColumn": 39,
-                    "endOffset": 1105
+                    "startOffset": 1057,
+                    "endColumn": 68,
+                    "endOffset": 1121
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -254,9 +254,9 @@
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1110,
-                    "endColumn": 42,
-                    "endOffset": 1148
+                    "startOffset": 1126,
+                    "endColumn": 39,
+                    "endOffset": 1161
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -266,9 +266,21 @@
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1153,
+                    "startOffset": 1166,
+                    "endColumn": 42,
+                    "endOffset": 1204
+                },
+                "from": {
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1209,
                     "endColumn": 57,
-                    "endOffset": 1206
+                    "endOffset": 1262
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/styles.xml"

@@ -24,83 +24,84 @@ import android.view.View.OnTouchListener;
 
 
 public class GraphicsView extends View implements OnTouchListener {
-	private static final String TAG = "GraphicsView";
+	private static String TAG = "GraphicsView";
 		
     Paint paint = new Paint();
     
     /*
 	 * number of card slots on board
 	 */
-	private final int num_of_slots = 8;
+	private int num_of_slots = 8;
     
     List<Card> cards = new ArrayList<Card>();
-    
-    Bitmap bmp_background 	= BitmapFactory.decodeResource(getResources(), R.drawable.bg_800x480);
-    Bitmap bmp_gate 		= BitmapFactory.decodeResource(getResources(), R.drawable.gate);
-    
-    Bitmap bmp_tower1 		= BitmapFactory.decodeResource(getResources(), R.drawable.tower_red);
-    Bitmap bmp_tower2 		= BitmapFactory.decodeResource(getResources(), R.drawable.tower_yellow);
-    
-    Bitmap bmp_ferda1 		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda1);
-    Bitmap bmp_ferda2 		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda2);
-    
-    Bitmap bmp_winner1		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda1_win);
-    Bitmap bmp_winner2 		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda2_win);
-    
+
+    private Bitmap bmp_background 	= BitmapFactory.decodeResource(getResources(), R.drawable.bg_1066x600);
+	private Bitmap bmp_gate 		= BitmapFactory.decodeResource(getResources(), R.drawable.gate);
+
+	private Bitmap bmp_tower1 		= BitmapFactory.decodeResource(getResources(), R.drawable.tower_red);
+	private Bitmap bmp_tower2 		= BitmapFactory.decodeResource(getResources(), R.drawable.tower_yellow);
+
+	private Bitmap bmp_ferda1 		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda1);
+	private Bitmap bmp_ferda2 		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda2);
+
+	private Bitmap bmp_winner1		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda1_win);
+	private Bitmap bmp_winner2 		= BitmapFactory.decodeResource(getResources(), R.drawable.ferda2_win);
+
+	private Bitmap tower1;
+	private Bitmap tower2;
+
     // Display metrics
-    //private final float scale = getResources().getDisplayMetrics().density;
-    private final int defaultWidth 	= 800;//px
-    private final int defaultHeight = 480;//px
-    private final int dWidth		= getResources().getDisplayMetrics().widthPixels;
-    private final int dHeight		= getResources().getDisplayMetrics().heightPixels;
-    private final float scaleW  	= dWidth/defaultWidth;
-    private final float scaleH  	= dHeight/defaultHeight;
+
+    //private double scale = getResources().getDisplayMetrics().density;
+    public static int defaultWidth = 800;//px
+    public static int defaultHeight = 480;//px
+    private int dWidth;
+    private int dHeight;
+    private double scaleW;//dWidth/defaultWidth;
+    private double scaleH;// (dHeight/defaultHeight);
     
     // define position and size of elements
-    private final int statsW 		= (int) (130*scaleW);
-    private final int statsH 		= (int) (70*scaleH);
-    private final int statsPadV 	= (int) (30*scaleH);
-    private final int statsPadH 	= (int) (10*scaleW);
-    private final int statsPadB 	= (int) (10*scaleH);
-    private final int statsFontSize	= (int) (15*scaleH);
-    private final int statsFontPad	= (int) (9*scaleH);
-    private final int scoreFontSize	= (int) (25*scaleH);
+    private int statsW;
+    private int statsH;
+    private int statsPadV;
+    private int statsPadH;
+    private int statsPadB;
+    private int statsFontSize;
+    private int statsFontPad;
+    private int scoreFontSize;
     
     //define color of elements
-    private final int statsRed		= Color.rgb(241, 52, 52);
-    private final int statsGreen	= Color.rgb(4, 174, 4);
-    private final int statsBlue		= Color.rgb(62, 136, 186);
+    private int statsRed;
+    private int statsGreen;
+    private int statsBlue;
     
-    private final int gateWidth		= (int) (180*scaleW);
-    private final int gateHeight	= (int) (102*scaleH);  
-    private final int gatePosY		= (int) (230*scaleH);
-    private final int gate1PosX		= (int) (150*scaleW);   
-    private final int gate2PosX		= (int) (470*scaleW);
+    private int gateWidth;
+    private int gateHeight;
+    private int gatePosY;
+    private int gate1PosX;
+    private int gate2PosX;
     
-    private final int towerWidth	= (int) (120*scaleW);//picture size 216
-    private final int towerHeight	= (int) (277*scaleW);//picture size 500
-    private final int towerMinH		= (int) (100*scaleH); 
-    private final float towerCoef	= (float) 2.15;
-    private final int towerDPosY	= (int) (20*scaleH); 
-    private final int tower1PosX	= (int) (180*scaleW);
-    private final int tower2PosX	= (int) (500*scaleW);
+    private int towerWidth;
+    private int towerHeight;
+    private int towerMinH;
+    private double towerCoef;
+    private int towerDPosY;
+    private int tower1PosX;
+    private int tower2PosX;
     
     // ferda 
-    private final int ferdaWidth	= (int) (50*scaleW);
-    private final int ferdaHeight	= (int) (113*scaleH);  
-    private final int ferdaPosY		= (int) (20*scaleH);
-    private final int ferda1PosX	= (int) (150*scaleW);   
-    private final int ferda2PosX	= (int) (600*scaleW);
+    private int ferdaWidth;
+    private int ferdaHeight;
+    private int ferdaPosY;
+    private int ferda1PosX;
+    private int ferda2PosX;
     
  // ferda winner
-    private final int winnerWidth	= (int) (100*scaleW);
-    private final int winnerHeight	= (int) (98*scaleH);  
-    private final int winnerPosY	= (int) (220*scaleH);
-    private final int winner1PosX	= (int) (250*scaleW);   
-    private final int winner2PosX	= (int) (470*scaleW);
-    
-    Bitmap tower1 = Bitmap.createScaledBitmap(bmp_tower1, towerWidth, towerHeight, true);
-    Bitmap tower2 = Bitmap.createScaledBitmap(bmp_tower2, towerWidth, towerHeight, true);
+    private int winnerWidth;
+    private int winnerHeight;
+    private int winnerPosY;
+    private int winner1PosX;
+    private int winner2PosX;
     
     // GAME
     private Game game;
@@ -110,12 +111,72 @@ public class GraphicsView extends View implements OnTouchListener {
 		setFocusable(true);
         setFocusableInTouchMode(true);
         this.setOnTouchListener(this);
-        
+
+		initializeDimensions();
         initializePaint();        
         initializeCards();
-        
+
+		Log.d("ScaleW", String.valueOf(scaleW));
+		Log.d("ScaleH", String.valueOf(scaleH));
+
+		Log.d("dWidth", String.valueOf(dWidth));
+		Log.d("dHeight", String.valueOf(dHeight));
         // Start game
-        game = new Game(cards, createSlots(), createSlots());
+        game = new Game(context, cards, createSlots(), createSlots());
+	}
+
+	private void initializeDimensions() {
+
+		dWidth		= getResources().getDisplayMetrics().widthPixels;
+		dHeight		= getResources().getDisplayMetrics().heightPixels;
+		scaleW  	= (double)dWidth/defaultWidth;
+		scaleH  	= (double)dHeight/defaultHeight;
+
+		// define position and size of elements
+		statsW 		= (int) (130*scaleW);
+		statsH 		= (int) (70*scaleH);
+		statsPadV 	= (int) (30*scaleH);
+		statsPadH 	= (int) (10*scaleW);
+		statsPadB 	= (int) (10*scaleH);
+		statsFontSize	= (int) (15*scaleH);
+		statsFontPad	= (int) (9*scaleH);
+		scoreFontSize	= (int) (25*scaleH);
+
+		//define color of elements
+		statsRed		= Color.rgb(241, 52, 52);
+		statsGreen	= Color.rgb(4, 174, 4);
+		statsBlue		= Color.rgb(62, 136, 186);
+
+		gateWidth		= (int) (180*scaleW);
+		gateHeight	= (int) (102*scaleH);
+		gatePosY		= (int) (230*scaleH);
+		gate1PosX		= (int) (150*scaleW);
+		gate2PosX		= (int) (470*scaleW);
+
+		towerWidth	= (int) (120*scaleW);//picture size 216
+		towerHeight	= (int) (277*scaleW);//picture size 500
+		towerMinH		= (int) (100*scaleH);
+		towerCoef	= (double) 2.15;
+		towerDPosY	= (int) (20*scaleH);
+		tower1PosX	= (int) (180*scaleW);
+		tower2PosX	= (int) (500*scaleW);
+
+		// ferda
+		ferdaWidth	= (int) (50*scaleW);
+		ferdaHeight	= (int) (113*scaleH);
+		ferdaPosY		= (int) (20*scaleH);
+		ferda1PosX	= (int) (150*scaleW);
+		ferda2PosX	= (int) (600*scaleW);
+
+		// ferda winner
+		winnerWidth	= (int) (100*scaleW);
+		winnerHeight	= (int) (98*scaleH);
+		winnerPosY	= (int) (220*scaleH);
+		winner1PosX	= (int) (250*scaleW);
+		winner2PosX	= (int) (470*scaleW);
+
+		tower1 = Bitmap.createScaledBitmap(bmp_tower1, towerWidth, towerHeight, true);
+		tower2 = Bitmap.createScaledBitmap(bmp_tower2, towerWidth, towerHeight, true);
 	}
 
 	@Override
@@ -187,7 +248,7 @@ public class GraphicsView extends View implements OnTouchListener {
 			          			if(!game.checkWin()){ // if player is not win game continue 
 				          			game.nextRound();
 				          		}else{				// else player wins
-				          			game.playerWins();
+				          			game.playerWon();
 				          		}
 			          		}
 			              	break;
@@ -254,8 +315,8 @@ public class GraphicsView extends View implements OnTouchListener {
 		Rect red2 	= new Rect(dWidth-statsPadH-statsW, statsPadV, dWidth-statsPadH, statsPadV+statsH);
 		Rect green2 = new Rect(dWidth-statsPadH-statsW, statsPadV+statsH, dWidth-statsPadH, statsPadV+statsH*2);
 		Rect blue2 	= new Rect(dWidth-statsPadH-statsW, statsPadV+statsH*2, dWidth-statsPadH, statsPadV+statsH*3);
-		Rect black2 = new Rect(dWidth-statsPadH-statsW, statsPadV+statsH*3+statsPadB, dWidth-statsPadH, statsPadV+statsH*4+statsPadB);
-		
+		Rect black2 = new Rect(dWidth - statsPadH-statsW, statsPadV+statsH*3+statsPadB, dWidth-statsPadH, statsPadV+statsH*4+statsPadB);
+
 		// draw boxes of statistics
 		paint.setColor(statsRed);
 		canvas.drawRect(red1, paint);

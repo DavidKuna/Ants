@@ -1,5 +1,8 @@
 package gobbl3r.ants;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import java.util.List;
 import java.util.Random;
 
@@ -12,15 +15,17 @@ public class Game {
 	private Player Opponent;
 	
 	private List<Card> cards;
+	private Context context;
 	
 	/**
 	 * Constructor of game. Game uses package of cards taken from parameter.
 	 * @param cards
 	 */
-	public Game(List<Card> cards, Slot[] slots1, Slot[] slots2){
+	public Game(Context context, List<Card> cards, Slot[] slots1, Slot[] slots2){
 		
 		this.cards = cards;
-		
+		this.context = context;
+
 		player1 = new Player(1, "Yellow", slots1);
 		player2 = new Player(2, "Green", slots2);
 		
@@ -41,8 +46,8 @@ public class Game {
 		Opponent 	= player2;
 		
 		// debug setting
-		player1.destroyCastle(28);
-		player2.buildCastle(68);
+		//player1.destroyCastle(28);
+		//player2.buildCastle(68);
 	}
 	
 	public Player getPlayerTurn(){
@@ -102,7 +107,7 @@ public class Game {
 		}	
 	}
 
-	public void playerWins(){
+	public void playerWon(){
 		PlayerTurn.addPoint();
 	}
 	

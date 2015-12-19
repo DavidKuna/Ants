@@ -19,11 +19,17 @@ public class Slot extends BitmapDrawable{
 	public Slot(int index, Context context){
 		
 		scale = context.getResources().getDisplayMetrics().density;
+
+		int dWidth		= context.getResources().getDisplayMetrics().widthPixels;
+		int dHeight		= context.getResources().getDisplayMetrics().heightPixels;
+
+		double scaleX = (double)dWidth/GraphicsView.defaultWidth;
+		double scaleY = (double)dHeight/GraphicsView.defaultHeight;
 		
-		cardPadL 	= (int) (6*scale);
-		cardPadT 	= (int) (225*scale);
-		dstWidth 	= (int) (60*scale); 
-		dstHeight 	= (int) (90*scale);
+		cardPadL 	= (int) (10*scaleX);
+		cardPadT 	= (int) (340*scaleY);
+		dstWidth 	= (int) (85*scaleX);
+		dstHeight 	= (int) (127*scaleY);
 		
 		this.setBounds(cardPadL + ((cardPadL + dstWidth)*(index)), cardPadT, ((cardPadL + dstWidth)*(index+1)), cardPadT+dstHeight);
 	}
@@ -42,5 +48,5 @@ public class Slot extends BitmapDrawable{
 		card.checkAvailability(player);
 		card.draw(canvas);
 	}
-	
+
 }

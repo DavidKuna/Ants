@@ -18,6 +18,7 @@
     <string name="country_prompt">Choose language</string>
     <string name="language">Language</string>
     <string name="settings">Settings</string>
+    <string name="red_won">Red player won</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>

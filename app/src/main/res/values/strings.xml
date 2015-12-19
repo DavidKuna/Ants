@@ -18,6 +18,7 @@
     <string name="country_prompt">Vyberte zemi</string>
     <string name="language">Jazyk</string>
     <string name="settings">Nastavení</string>
+    <string name="red_won">Červený hráč vyhrál</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>
