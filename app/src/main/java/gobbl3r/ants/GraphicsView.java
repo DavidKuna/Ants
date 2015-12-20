@@ -8,7 +8,9 @@ import gobbl3r.cards.CardWall;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -21,12 +23,14 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.Toast;
 
 
 public class GraphicsView extends View implements OnTouchListener {
 	private static String TAG = "GraphicsView";
 		
-    Paint paint = new Paint();
+    private Paint paint = new Paint();
+    private Context context;
     
     /*
 	 * number of card slots on board
@@ -69,6 +73,7 @@ public class GraphicsView extends View implements OnTouchListener {
     private int statsFontSize;
     private int statsFontPad;
     private int scoreFontSize;
+    private int scoreFontPad;
     
     //define color of elements
     private int statsRed;
@@ -108,6 +113,7 @@ public class GraphicsView extends View implements OnTouchListener {
 	
 	public GraphicsView(Context context) {
 		super(context);
+        this.context = context;
 		setFocusable(true);
         setFocusableInTouchMode(true);
         this.setOnTouchListener(this);
@@ -116,11 +122,6 @@ public class GraphicsView extends View implements OnTouchListener {
         initializePaint();        
         initializeCards();
 
-		Log.d("ScaleW", String.valueOf(scaleW));
-		Log.d("ScaleH", String.valueOf(scaleH));
-
-		Log.d("dWidth", String.valueOf(dWidth));
-		Log.d("dHeight", String.valueOf(dHeight));
         // Start game
         game = new Game(context, cards, createSlots(), createSlots());
 	}
@@ -141,6 +142,7 @@ public class GraphicsView extends View implements OnTouchListener {
 		statsFontSize	= (int) (15*scaleH);
 		statsFontPad	= (int) (9*scaleH);
 		scoreFontSize	= (int) (25*scaleH);
+        scoreFontPad    = (int) (110*scaleH);
 
 		//define color of elements
 		statsRed		= Color.rgb(241, 52, 52);
@@ -148,14 +150,14 @@ public class GraphicsView extends View implements OnTouchListener {
 		statsBlue		= Color.rgb(62, 136, 186);
 
 		gateWidth		= (int) (180*scaleW);
-		gateHeight	= (int) (102*scaleH);
+		gateHeight	    = (int) (102*scaleH);
 		gatePosY		= (int) (230*scaleH);
 		gate1PosX		= (int) (150*scaleW);
 		gate2PosX		= (int) (470*scaleW);
 
 		towerWidth	= (int) (120*scaleW);//picture size 216
 		towerHeight	= (int) (277*scaleW);//picture size 500
-		towerMinH		= (int) (100*scaleH);
+		towerMinH	= (int) (100*scaleH);
 		towerCoef	= (double) 2.15;
 		towerDPosY	= (int) (20*scaleH);
 		tower1PosX	= (int) (180*scaleW);
@@ -336,33 +338,12 @@ public class GraphicsView extends View implements OnTouchListener {
 		
 		paint.setColor(Color.WHITE);
 		paint.setTextSize(statsFontSize);
-		
-		// draw text into boxes player1
-		canvas.drawText(this.getContext().getString(R.string.builders) + " " + String.valueOf(game.player1.getBuilder()), red1.left+statsFontPad, red1.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.bricks) + "     " + String.valueOf(game.player1.getBrick()), red1.left+statsFontPad, red1.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
-		
-		canvas.drawText(this.getContext().getString(R.string.soldiers) + "    " + String.valueOf(game.player1.getSoldier()), green1.left+statsFontPad, green1.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.weapons) + "    " + String.valueOf(game.player1.getWeapon()), green1.left+statsFontPad, green1.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
 
-		canvas.drawText(this.getContext().getString(R.string.mages) + "    " + String.valueOf(game.player1.getMage()), blue1.left+statsFontPad, blue1.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.crystals) + "  " + String.valueOf(game.player1.getCrystal()), blue1.left+statsFontPad, blue1.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+        // draw text into boxes player1
+        drawPlayerStats(canvas, game.player1, red1, green1, blue1, black1);
+        // draw text into boxes player2
+        drawPlayerStats(canvas, game.player2, red2, green2, blue2, black2);
 
-		canvas.drawText(this.getContext().getString(R.string.castle) + "      " + String.valueOf(game.player1.getCastle()), black1.left+statsFontPad, black1.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.wall) + "    " + String.valueOf(game.player1.getWall()), black1.left+statsFontPad, black1.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
-		
-		// draw text into boxes player2
-		canvas.drawText(this.getContext().getString(R.string.builders) + " " + String.valueOf(game.player2.getBuilder()), red2.left+statsFontPad, red2.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.bricks) + "     " + String.valueOf(game.player2.getBrick()), red2.left+statsFontPad, red2.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
-		
-		canvas.drawText(this.getContext().getString(R.string.soldiers) + "    " + String.valueOf(game.player2.getSoldier()), green2.left+statsFontPad, green2.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.weapons) + "    " + String.valueOf(game.player2.getWeapon()), green2.left+statsFontPad, green2.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
-
-		canvas.drawText(this.getContext().getString(R.string.mages) + "    " + String.valueOf(game.player2.getMage()), blue2.left+statsFontPad, blue2.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.crystals) + "  " + String.valueOf(game.player2.getCrystal()), blue2.left+statsFontPad, blue2.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
-
-		canvas.drawText(this.getContext().getString(R.string.castle) + "      " + String.valueOf(game.player2.getCastle()), black2.left+statsFontPad, black2.top+statsFontSize+statsFontPad, paint);
-		canvas.drawText(this.getContext().getString(R.string.wall) + "    " + String.valueOf(game.player2.getWall()), black2.left+statsFontPad, black2.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
-		
 		paint.setColor(Color.BLACK);
 		paint.setTextSize(scoreFontSize);
 		// draw score of player1
@@ -370,6 +351,28 @@ public class GraphicsView extends View implements OnTouchListener {
 		// draw score of player2
 		canvas.drawText(String.valueOf(game.player2.getScore()), (int)((red2.right-red2.left)/2)+red2.left, red2.top-5, paint);
 	}
+
+    private void drawPlayerStats(Canvas canvas, Player player, Rect red, Rect green, Rect blue, Rect black) {
+        canvas.drawText(context.getString(R.string.builders), red.left+statsFontPad, red.top+statsFontSize+statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getBuilder()), red.left+scoreFontPad, red.top+statsFontSize+statsFontPad, paint);
+        canvas.drawText(context.getString(R.string.bricks), red.left+statsFontPad, red.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getBrick()), red.left+scoreFontPad, red.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+
+        canvas.drawText(context.getString(R.string.soldiers), green.left+statsFontPad, green.top+statsFontSize+statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getSoldier()), green.left+scoreFontPad, green.top+statsFontSize+statsFontPad, paint);
+        canvas.drawText(context.getString(R.string.weapons), green.left+statsFontPad, green.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getWeapon()), green.left+scoreFontPad, green.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+
+        canvas.drawText(context.getString(R.string.mages), blue.left+statsFontPad, blue.top + statsFontSize + statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getMage()), blue.left+scoreFontPad, blue.top+statsFontSize+statsFontPad, paint);
+        canvas.drawText(context.getString(R.string.crystals), blue.left+statsFontPad, blue.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getCrystal()), blue.left+scoreFontPad, blue.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+
+        canvas.drawText(context.getString(R.string.castle), black.left + statsFontPad, black.top + statsFontSize + statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getCastle()), black.left + scoreFontPad, black.top + statsFontSize + statsFontPad, paint);
+        canvas.drawText(context.getString(R.string.wall), black.left+statsFontPad, black.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+        canvas.drawText(String.valueOf(player.getWall()), black.left+scoreFontPad, black.top+(statsFontSize+statsFontPad)*2+statsFontPad, paint);
+    }
 
 	/**
 	 * Draw illustration of player's turn

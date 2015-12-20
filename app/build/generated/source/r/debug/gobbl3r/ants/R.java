@@ -62,15 +62,19 @@ public final class R {
         public static final int language=0x7f050007;
         public static final int mages=0x7f050008;
         public static final int menu_settings=0x7f050009;
-        public static final int play_new_game=0x7f05000a;
-        public static final int red_won=0x7f05000b;
-        public static final int settings=0x7f05000c;
-        public static final int soldiers=0x7f05000d;
-        public static final int title=0x7f05000e;
-        public static final int title_activity_main=0x7f05000f;
-        public static final int title_activity_settings=0x7f050010;
-        public static final int wall=0x7f050011;
-        public static final int weapons=0x7f050012;
+        public static final int play_again=0x7f05000a;
+        public static final int play_new_game=0x7f05000b;
+        public static final int quit=0x7f05000c;
+        public static final int red_won=0x7f05000d;
+        public static final int return_to_menu=0x7f05000e;
+        public static final int settings=0x7f05000f;
+        public static final int soldiers=0x7f050010;
+        public static final int title=0x7f050011;
+        public static final int title_activity_main=0x7f050012;
+        public static final int title_activity_settings=0x7f050013;
+        public static final int wall=0x7f050014;
+        public static final int weapons=0x7f050015;
+        public static final int yellow_won=0x7f050016;
     }
     public static final class style {
         public static final int AppTheme=0x7f070000;

@@ -18,7 +18,11 @@
     <string name="country_prompt">Vyberte zemi</string>
     <string name="language">Jazyk</string>
     <string name="settings">Nastavení</string>
-    <string name="red_won">Červený hráč vyhrál</string>
+    <string name="red_won">Červený mravenec vyhrál</string>
+    <string name="quit">Konec hry</string>
+    <string name="play_again">Hrát znovu</string>
+    <string name="return_to_menu">Návrat do menu</string>
+    <string name="yellow_won">Žlutý mravenec vyhrál</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>

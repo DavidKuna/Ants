@@ -164,8 +164,8 @@
                     "startLine": 18,
                     "startColumn": 4,
                     "startOffset": 748,
-                    "endColumn": 57,
-                    "endOffset": 801
+                    "endColumn": 49,
+                    "endOffset": 793
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -175,28 +175,21 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 806,
-                    "endColumn": 55,
-                    "endOffset": 857
+                    "startOffset": 798,
+                    "endColumn": 57,
+                    "endOffset": 851
                 },
                 "from": {
-                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 882,
-                        "endColumn": 55,
-                        "endOffset": 933
-                    }
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 862,
-                    "endColumn": 46,
-                    "endOffset": 904
+                    "startOffset": 856,
+                    "endColumn": 42,
+                    "endOffset": 894
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -206,21 +199,28 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 909,
-                    "endColumn": 43,
-                    "endOffset": 948
+                    "startOffset": 899,
+                    "endColumn": 59,
+                    "endOffset": 954
                 },
                 "from": {
-                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 882,
+                        "endColumn": 59,
+                        "endOffset": 937
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 953,
-                    "endColumn": 42,
-                    "endOffset": 991
+                    "startOffset": 959,
+                    "endColumn": 57,
+                    "endOffset": 1012
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -230,9 +230,9 @@
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 996,
-                    "endColumn": 60,
-                    "endOffset": 1052
+                    "startOffset": 1017,
+                    "endColumn": 46,
+                    "endOffset": 1059
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -242,9 +242,9 @@
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 1057,
-                    "endColumn": 68,
-                    "endOffset": 1121
+                    "startOffset": 1064,
+                    "endColumn": 43,
+                    "endOffset": 1103
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -254,9 +254,9 @@
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1126,
-                    "endColumn": 39,
-                    "endOffset": 1161
+                    "startOffset": 1108,
+                    "endColumn": 42,
+                    "endOffset": 1146
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -266,9 +266,9 @@
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1166,
-                    "endColumn": 42,
-                    "endOffset": 1204
+                    "startOffset": 1151,
+                    "endColumn": 60,
+                    "endOffset": 1207
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
@@ -278,9 +278,64 @@
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1209,
+                    "startOffset": 1212,
+                    "endColumn": 68,
+                    "endOffset": 1276
+                },
+                "from": {
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1281,
+                    "endColumn": 39,
+                    "endOffset": 1316
+                },
+                "from": {
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1321,
+                    "endColumn": 42,
+                    "endOffset": 1359
+                },
+                "from": {
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1364,
+                    "endColumn": 60,
+                    "endOffset": 1420
+                },
+                "from": {
+                    "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1093,
+                        "endColumn": 60,
+                        "endOffset": 1149
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1425,
                     "endColumn": 57,
-                    "endOffset": 1262
+                    "endOffset": 1478
                 },
                 "from": {
                     "file": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/values/styles.xml"

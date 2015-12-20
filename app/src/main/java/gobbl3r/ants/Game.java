@@ -1,6 +1,8 @@
 package gobbl3r.ants;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.widget.Toast;
 
 import java.util.List;
@@ -46,8 +48,8 @@ public class Game {
 		Opponent 	= player2;
 		
 		// debug setting
-		//player1.destroyCastle(28);
-		//player2.buildCastle(68);
+		player1.destroyCastle(28);
+		player2.buildCastle(68);
 	}
 	
 	public Player getPlayerTurn(){
@@ -109,6 +111,23 @@ public class Game {
 
 	public void playerWon(){
 		PlayerTurn.addPoint();
+
+        new AlertDialog.Builder(context)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle(R.string.quit)
+                .setMessage(PlayerTurn.getId() == 1 ? R.string.red_won : R.string.yellow_won)
+                .setPositiveButton(R.string.return_to_menu, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        //Stop the activity
+                        ((GameActivity) context).finish();
+                    }
+
+                })
+                .setNegativeButton(R.string.play_again, null)
+                .show();
 	}
 	
 }
