@@ -35,7 +35,7 @@ public class GraphicsView extends View implements OnTouchListener {
     /*
 	 * number of card slots on board
 	 */
-	private int num_of_slots = 8;
+	private final int num_of_slots = 8;
     
     List<Card> cards = new ArrayList<Card>();
 
@@ -126,6 +126,9 @@ public class GraphicsView extends View implements OnTouchListener {
         game = new Game(context, cards, createSlots(), createSlots());
 	}
 
+    /**
+     * Initializing metrics, scales and dimensions
+     */
 	private void initializeDimensions() {
 
 		dWidth		= getResources().getDisplayMetrics().widthPixels;
@@ -158,7 +161,7 @@ public class GraphicsView extends View implements OnTouchListener {
 		towerWidth	= (int) (120*scaleW);//picture size 216
 		towerHeight	= (int) (277*scaleW);//picture size 500
 		towerMinH	= (int) (100*scaleH);
-		towerCoef	= (double) 2.15;
+		towerCoef	= 2.15;
 		towerDPosY	= (int) (20*scaleH);
 		tower1PosX	= (int) (180*scaleW);
 		tower2PosX	= (int) (500*scaleW);
@@ -190,6 +193,7 @@ public class GraphicsView extends View implements OnTouchListener {
 		drawTowers(canvas);
 		// draw statistics
 		drawStats(canvas);
+
 		
 		if(game.checkWin()){
   			drawWinner(canvas);
@@ -199,6 +203,7 @@ public class GraphicsView extends View implements OnTouchListener {
 		
 		// draw slots with cards of current player
 		game.getPlayerTurn().drawSlots(canvas);
+        drawLastCard(canvas);
 
     }
 	
@@ -303,8 +308,33 @@ public class GraphicsView extends View implements OnTouchListener {
 		canvas.drawBitmap(Bitmap.createScaledBitmap(bmp_gate, gateWidth, gateHeight, true), gate2PosX, gatePosY, paint);
 				
 	}
-	
-	/**
+
+    /**
+     * Draw last played card
+     * @param canvas
+     */
+    public void drawLastCard(Canvas canvas){
+        int dWidth		= context.getResources().getDisplayMetrics().widthPixels;
+        int dHeight		= context.getResources().getDisplayMetrics().heightPixels;
+
+        double scaleX = (double)dWidth/GraphicsView.defaultWidth;
+        double scaleY = (double)dHeight/GraphicsView.defaultHeight;
+
+        int dstWidth 	= (int) (85*scaleX);
+        int dstHeight 	= (int) (127*scaleY);
+        int cardPadL 	= (int) ((dWidth - dstWidth) / 2);
+        int cardPadT 	= (int) (30*scaleY);
+
+        Rect bounds = new Rect(cardPadL, cardPadT, (cardPadL + dstWidth), cardPadT + dstHeight);
+        Card lastCard = game.getLastPlayedCard();
+        if (lastCard instanceof Card) {
+            lastCard.setBounds(bounds);
+            lastCard.setAvailability(true);
+            lastCard.draw(canvas);
+        }
+    }
+
+    /**
 	 * Draw statistics of both players
 	 * @param canvas
 	 */
@@ -352,6 +382,15 @@ public class GraphicsView extends View implements OnTouchListener {
 		canvas.drawText(String.valueOf(game.player2.getScore()), (int)((red2.right-red2.left)/2)+red2.left, red2.top-5, paint);
 	}
 
+    /**
+     * Draw statistics of one player
+     * @param canvas
+     * @param player
+     * @param red
+     * @param green
+     * @param blue
+     * @param black
+     */
     private void drawPlayerStats(Canvas canvas, Player player, Rect red, Rect green, Rect blue, Rect black) {
         canvas.drawText(context.getString(R.string.builders), red.left+statsFontPad, red.top+statsFontSize+statsFontPad, paint);
         canvas.drawText(String.valueOf(player.getBuilder()), red.left+scoreFontPad, red.top+statsFontSize+statsFontPad, paint);

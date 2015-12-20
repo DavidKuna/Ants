@@ -7,7 +7,6 @@ import android.graphics.drawable.BitmapDrawable;
 public class Slot extends BitmapDrawable{
 
 	// Display metrics
-    private float scale;
 
     protected final int cardPadL;
     protected final int cardPadT;
@@ -17,8 +16,6 @@ public class Slot extends BitmapDrawable{
 	private Card card;
 	
 	public Slot(int index, Context context){
-		
-		scale = context.getResources().getDisplayMetrics().density;
 
 		int dWidth		= context.getResources().getDisplayMetrics().widthPixels;
 		int dHeight		= context.getResources().getDisplayMetrics().heightPixels;

@@ -18,6 +18,8 @@ public class Game {
 	
 	private List<Card> cards;
 	private Context context;
+
+    private Card lastPlayedCard;
 	
 	/**
 	 * Constructor of game. Game uses package of cards taken from parameter.
@@ -46,6 +48,8 @@ public class Game {
 		
 		PlayerTurn 	= player1;
 		Opponent 	= player2;
+
+        lastPlayedCard = null;
 		
 		// debug setting
 		player1.destroyCastle(28);
@@ -59,11 +63,17 @@ public class Game {
 	public Player getOpponent(){
 		return this.Opponent;
 	}
-	
+
+    /**
+     * Behivior after touching card
+     * @param index
+     * @return
+     */
 	public boolean playCard(int index){
-		if(this.PlayerTurn.getCard(index).isAvailable()){
-			this.PlayerTurn.getCard(index).play(PlayerTurn, Opponent);
-			this.PlayerTurn.setSlot(index, getRandomCard());
+		if(PlayerTurn.getCard(index).isAvailable()){
+			PlayerTurn.getCard(index).play(PlayerTurn, Opponent);
+            lastPlayedCard = PlayerTurn.getCard(index);
+			PlayerTurn.setSlot(index, getRandomCard());
 			return true;
 		}else{
 			return false;
@@ -109,6 +119,9 @@ public class Game {
 		}	
 	}
 
+    /**
+     * Behavior after victory
+     */
 	public void playerWon(){
 		PlayerTurn.addPoint();
 
@@ -129,5 +142,12 @@ public class Game {
                 .setNegativeButton(R.string.play_again, null)
                 .show();
 	}
-	
+
+    /**
+     * Return last played card
+     * @return
+     */
+    public Card getLastPlayedCard() {
+        return lastPlayedCard;
+    }
 }

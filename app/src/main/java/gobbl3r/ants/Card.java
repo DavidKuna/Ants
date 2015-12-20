@@ -20,7 +20,11 @@ public abstract class Card extends BitmapDrawable{
 	public boolean isAvailable(){
 		return this.available;
 	}
-	
+
+	public void setAvailability(boolean available) {
+		this.available = available;
+	}
+
 	@Override
 	public void draw(Canvas canvas){
 		if(this.available){
