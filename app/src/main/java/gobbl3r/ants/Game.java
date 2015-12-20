@@ -56,7 +56,7 @@ public class Game {
 		player2.buildCastle(68);
 	}
 	
-	public Player getPlayerTurn(){
+	public Player getCurrentPlayer(){
 		return this.PlayerTurn;
 	}
 	

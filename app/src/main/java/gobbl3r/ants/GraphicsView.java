@@ -8,9 +8,7 @@ import gobbl3r.cards.CardWall;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -23,7 +21,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.widget.Toast;
 
 
 public class GraphicsView extends View implements OnTouchListener {
@@ -202,7 +199,7 @@ public class GraphicsView extends View implements OnTouchListener {
   		}
 		
 		// draw slots with cards of current player
-		game.getPlayerTurn().drawSlots(canvas);
+		game.getCurrentPlayer().drawSlots(canvas);
         drawLastCard(canvas);
 
     }
@@ -249,7 +246,7 @@ public class GraphicsView extends View implements OnTouchListener {
             case MotionEvent.ACTION_DOWN: 
             	if(!game.checkWin()){
 			       	for (int i = 0; i < num_of_slots; i++) {
-			          	if (game.getPlayerTurn().getSlot(i).getBounds().contains(point.x, point.y)) {
+			          	if (game.getCurrentPlayer().getSlot(i).getBounds().contains(point.x, point.y)) {
 			          		
 			          		if(game.playCard(i)){ // if card was available and played 
 			          			if(!game.checkWin()){ // if player is not win game continue 
@@ -418,7 +415,7 @@ public class GraphicsView extends View implements OnTouchListener {
 	 * @param canvas
 	 */
 	public void drawCurrentPlayer(Canvas canvas){
-		if(game.getPlayerTurn().getId() == 1){
+		if(game.getCurrentPlayer().getId() == 1){
 			canvas.drawBitmap(Bitmap.createScaledBitmap(bmp_ferda1, ferdaWidth, ferdaHeight, true), ferda1PosX, ferdaPosY, paint);
 		}else{
 			canvas.drawBitmap(Bitmap.createScaledBitmap(bmp_ferda2, ferdaWidth, ferdaHeight, true), ferda2PosX, ferdaPosY, paint);
@@ -430,7 +427,7 @@ public class GraphicsView extends View implements OnTouchListener {
 	 * @param canvas
 	 */
 	public void drawWinner(Canvas canvas){
-		if(game.getPlayerTurn().getId() == 1){
+		if(game.getCurrentPlayer().getId() == 1){
 			canvas.drawBitmap(Bitmap.createScaledBitmap(bmp_winner1, winnerWidth, winnerHeight, true), winner1PosX, winnerPosY, paint);
 		}else{
 			canvas.drawBitmap(Bitmap.createScaledBitmap(bmp_winner2, winnerWidth, winnerHeight, true), winner2PosX, winnerPosY, paint);
