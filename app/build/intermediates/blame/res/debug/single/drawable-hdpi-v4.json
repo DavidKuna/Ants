@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card02_blank.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card02_blank.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card_back.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card_back.png"
+    },
+    {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card01.png",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card01.png"
     },
@@ -12,12 +20,20 @@
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card04.png"
     },
     {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/diamond.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/diamond.png"
+    },
+    {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/large.jpg",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/large.jpg"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ferda1.png",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/ferda1.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gate.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/gate.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ferda2.png",
@@ -28,8 +44,28 @@
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/bg_800x480.png"
     },
     {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gate.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/gate.png"
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/sword.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/sword.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card03_blank.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card03_blank.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/bg_1066x600.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/bg_1066x600.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/wall.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/wall.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ferda1_win.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/ferda1_win.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/fortress.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/fortress.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card02.png",
@@ -40,12 +76,8 @@
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/tower_red.png"
     },
     {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/bg_1066x600.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/bg_1066x600.png"
-    },
-    {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ferda1_win.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/ferda1_win.png"
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card01_blank.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card01_blank.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card03.png",

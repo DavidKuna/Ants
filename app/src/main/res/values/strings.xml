@@ -23,6 +23,13 @@
     <string name="play_again">Hrát znovu</string>
     <string name="return_to_menu">Návrat do menu</string>
     <string name="yellow_won">Žlutý mravenec vyhrál</string>
+    <string name="conjure_crystals">Čaruj krystaly</string>
+    <string name="conjure_crystals_text">Krystaly + 4</string>
+    <string name="knight_text">Útok + 3</string>
+    <string name="tower_text">Hrad + 5</string>
+    <string name="tower">Věž</string>
+    <string name="knight">Rytíř</string>
+    <string name="defence_text">Obrana + 2</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>

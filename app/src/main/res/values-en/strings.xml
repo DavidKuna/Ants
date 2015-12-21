@@ -23,6 +23,13 @@
     <string name="play_again">Play next round</string>
     <string name="return_to_menu">Return to menu</string>
     <string name="yellow_won">Yellow ant won</string>
+    <string name="conjure_crystals">Conjure crystals</string>
+    <string name="conjure_crystals_text">Crystals + 4</string>
+    <string name="knight_text">Attack + 3</string>
+    <string name="tower_text">Castle + 5</string>
+    <string name="tower">Tower</string>
+    <string name="knight">Knight</string>
+    <string name="defence_text">Defence + 2</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>

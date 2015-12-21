@@ -73,9 +73,9 @@ public class GraphicsView extends View implements OnTouchListener {
     private int scoreFontPad;
     
     //define color of elements
-    private int statsRed;
-    private int statsGreen;
-    private int statsBlue;
+    public static int statsRed;
+    public static int statsGreen;
+    public static int statsBlue;
     
     private int gateWidth;
     private int gateHeight;
@@ -433,4 +433,14 @@ public class GraphicsView extends View implements OnTouchListener {
 			canvas.drawBitmap(Bitmap.createScaledBitmap(bmp_winner2, winnerWidth, winnerHeight, true), winner2PosX, winnerPosY, paint);
 		}
 	}
+
+    public static double getScaleX(Context context) {
+        int dWidth	= context.getResources().getDisplayMetrics().widthPixels;
+        return (double)dWidth/GraphicsView.defaultHeight;
+    }
+
+    public static double getScaleY(Context context) {
+        int dHeight		= context.getResources().getDisplayMetrics().heightPixels;
+        return (double)dHeight/GraphicsView.defaultHeight;
+    }
 }
