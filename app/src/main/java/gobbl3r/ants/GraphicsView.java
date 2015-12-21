@@ -1,9 +1,14 @@
 package gobbl3r.ants;
 
+import gobbl3r.cards.CardArcher;
 import gobbl3r.cards.CardConjureCrystals;
+import gobbl3r.cards.CardDestroyWeapons;
+import gobbl3r.cards.CardDragon;
 import gobbl3r.cards.CardKnight;
 import gobbl3r.cards.CardTower;
+import gobbl3r.cards.CardUniversity;
 import gobbl3r.cards.CardWall;
+import gobbl3r.cards.CardWizard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -217,12 +222,27 @@ public class GraphicsView extends View implements OnTouchListener {
 	 * Initialize of cards which will be used for game
 	 */
 	private void initializeCards(){
-		cards.add(new CardKnight(this.getContext()));
-		cards.add(new CardWall(this.getContext()));
-		cards.add(new CardWall(this.getContext()));
-		cards.add(new CardConjureCrystals(this.getContext()));
-		cards.add(new CardTower(this.getContext()));
+        addCardToPackage(new CardKnight(this.getContext()), 4);
+        addCardToPackage(new CardWall(this.getContext()), 4);
+        addCardToPackage(new CardConjureCrystals(this.getContext()), 1);
+        addCardToPackage(new CardTower(this.getContext()), 2);
+        addCardToPackage(new CardArcher(this.getContext()), 5);
+        addCardToPackage(new CardDragon(this.getContext()), 1);
+        addCardToPackage(new CardUniversity(this.getContext()), 1);
+        addCardToPackage(new CardWizard(this.getContext()), 1);
+        addCardToPackage(new CardDestroyWeapons(this.getContext()), 2);
 	}
+
+    /**
+     * Add card to package x times
+     * @param card
+     * @param count
+     */
+    private void addCardToPackage(Card card, int count) {
+        for (int i = 0; i < count; i++) {
+            cards.add(card);
+        }
+    }
 	
 	/**
 	 * Initialize of cards which will be used for game

@@ -7,12 +7,23 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="app_name">Ants</string>
+    <string name="archer">Střelec</string>
+    <string name="attack">Útok</string>
     <string name="bricks">Cihly</string>
     <string name="builders">Stavitelé</string>
     <string name="castle">Hrad</string>
+    <string name="conjure_crystals">Čaruj krystaly</string>
+    <string name="conjure_crystals_text">Krystaly + 4</string>
     <string name="country_prompt">Vyberte zemi</string>
     <string name="crystals">Krystaly</string>
+    <string name="defence">Obrana</string>
+    <string name="defence_text">Hradba + 3</string>
+    <string name="destroy">Destroy</string>
+    <string name="dragon">Dragon</string>
+    <string name="enemy">Enemy</string>
     <string name="hello_world">Hello world!</string>
+    <string name="knight">Rytíř</string>
+    <string name="knight_text">Útok + 3</string>
     <string name="language">Jazyk</string>
     <string name="mages">Mágové</string>
     <string name="menu_settings">Settings</string>
@@ -26,8 +37,12 @@
     <string name="title">Mravenci</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="tower">Věž</string>
+    <string name="tower_text">Hrad + 5</string>
+    <string name="university">University</string>
     <string name="wall">Hradba</string>
     <string name="weapons">Zbraně</string>
+    <string name="wizard">Wizard</string>
     <string name="yellow_won">Žlutý mravenec vyhrál</string>
     <style name="AppTheme" parent="android:Theme.Light"/>
 </resources>

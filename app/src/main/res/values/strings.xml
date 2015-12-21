@@ -29,7 +29,15 @@
     <string name="tower_text">Hrad + 5</string>
     <string name="tower">Věž</string>
     <string name="knight">Rytíř</string>
-    <string name="defence_text">Obrana + 2</string>
+    <string name="defence_text">Hradba + 3</string>
+    <string name="defence">Obrana</string>
+    <string name="attack">Útok</string>
+    <string name="archer">Střelec</string>
+    <string name="dragon">Dragon</string>
+    <string name="university">University</string>
+    <string name="enemy">Enemy</string>
+    <string name="destroy">Destroy</string>
+    <string name="wizard">Wizard</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>

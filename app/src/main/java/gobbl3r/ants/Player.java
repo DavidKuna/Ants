@@ -176,31 +176,52 @@ public class Player {
 	
 	public void removeBrick(int num){
 		this.brick -= num;
+		if (brick < 0) {
+			brick = 0;
+		}
 	}
 	
 	public void removeWeapon(int num){
 		this.weapon -= num;
+		if (weapon < 0) {
+			weapon = 0;
+		}
 	}
 	
 	public void removeCrystal(int num){
 		this.crystal -= num;
+		if (crystal < 0) {
+			crystal = 0;
+		}
 	}
 	
 	public void removeBuilder(int num){
 		this.builder -= num;
+		if (builder < 0) {
+			builder = 0;
+		}
 	}
 	
 	public void removeSoldier(int num){
 		this.soldier -= num;
+		if (soldier < 0) {
+			soldier = 0;
+		}
 	}
 	
 	public void removeMage(int num){
 		this.mage -= num;
+		if (mage < 0) {
+			mage = 0;
+		}
 	}
 	
 	public void attack(int num){
 		if(num > this.wall){
 			this.castle -= num - this.wall;
+			if (castle < 0) {
+				castle = 0;
+			}
 			this.wall 	= 0;
 		}else{
 			this.wall -= num;
@@ -209,6 +230,9 @@ public class Player {
 	
 	public void destroyCastle(int num){
 		this.castle -= num;
+		if (castle < 0) {
+			castle = 0;
+		}
 	}
 	
 	public void destroyWall(int num){

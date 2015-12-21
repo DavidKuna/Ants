@@ -4,20 +4,16 @@
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card02_blank.png"
     },
     {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card_back.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card_back.png"
-    },
-    {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card01.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card01.png"
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/wizard_256.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/wizard_256.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card04.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card04.png"
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/wizard_hat.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/wizard_hat.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/diamond.png",
@@ -32,6 +28,10 @@
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/ferda1.png"
     },
     {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/dragon_eye.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/dragon_eye.png"
+    },
+    {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gate.png",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/gate.png"
     },
@@ -42,6 +42,10 @@
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/bg_800x480.png",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/bg_800x480.png"
+    },
+    {
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/bow.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/bow.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/sword.png",
@@ -68,8 +72,8 @@
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/fortress.png"
     },
     {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card02.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card02.png"
+        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/old_book.png",
+        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/old_book.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/tower_red.png",
@@ -78,10 +82,6 @@
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card01_blank.png",
         "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card01_blank.png"
-    },
-    {
-        "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/card03.png",
-        "source": "/home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/res/drawable-hdpi/card03.png"
     },
     {
         "merged": "/home/gobbl3r/AndroidStudioProjects/Ants/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ferda2_win.png",

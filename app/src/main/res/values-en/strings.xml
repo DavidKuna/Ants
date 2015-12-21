@@ -5,8 +5,8 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="builders">Builders</string>
-    <string name="soldiers">Soldiers</string>
-    <string name="mages">Magicians</string>
+    <string name="soldiers">Warriors</string>
+    <string name="mages">Wizards</string>
     <string name="bricks">Bricks</string>
     <string name="weapons">Weapons</string>
     <string name="crystals">Crystals</string>
@@ -23,13 +23,21 @@
     <string name="play_again">Play next round</string>
     <string name="return_to_menu">Return to menu</string>
     <string name="yellow_won">Yellow ant won</string>
-    <string name="conjure_crystals">Conjure crystals</string>
+    <string name="conjure_crystals">Conjure</string>
     <string name="conjure_crystals_text">Crystals + 4</string>
     <string name="knight_text">Attack + 3</string>
     <string name="tower_text">Castle + 5</string>
     <string name="tower">Tower</string>
     <string name="knight">Knight</string>
-    <string name="defence_text">Defence + 2</string>
+    <string name="defence_text">Wall + 3</string>
+    <string name="defence">Defence</string>
+    <string name="attack">Attack</string>
+    <string name="archer">Archer</string>
+    <string name="dragon">Dragon</string>
+    <string name="university">University</string>
+    <string name="enemy">Enemy</string>
+    <string name="destroy">Destroy</string>
+    <string name="wizard">Wizard</string>
 
     <string-array name="country_arrays">
         <item>Čeština</item>
