@@ -60,7 +60,7 @@ public abstract class Card extends BitmapDrawable{
         Paint paint = new Paint();
         paint.setColor(nameColor);
         paint.setAntiAlias(true);
-        paint.setTextSize(20f);
+        paint.setTextSize((float)(15 * GraphicsView.getScaleY(context)));
         paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
         int left = (int) (getCenterX() - paint.measureText(name) / 2);
         int top = (int)(getBounds().top + (30 * GraphicsView.getScaleY(context)));
@@ -71,9 +71,9 @@ public abstract class Card extends BitmapDrawable{
         Paint paint = new Paint();
         paint.setColor(Color.BLACK);
         paint.setAntiAlias(true);
-        paint.setTextSize(17f);
+        paint.setTextSize((float)(12 * GraphicsView.getScaleY(context)));
         paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-        int left = (int) (getBounds().right - 12 * GraphicsView.getScaleX(context));
+        int left = (int) (getBounds().right - 15 * GraphicsView.getScaleX(context));
         int top = (int)(getBounds().top + (17 * GraphicsView.getScaleY(context)));
         canvas.drawText(String.valueOf(cost), left, top, paint);
     }
@@ -84,10 +84,10 @@ public abstract class Card extends BitmapDrawable{
             Paint paint = new Paint();
             paint.setColor(Color.BLACK);
             paint.setAntiAlias(true);
-            paint.setTextSize(14f);
+            paint.setTextSize((float)(10 * GraphicsView.getScaleY(context)));
             paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
             int left = (int) (getCenterX() - paint.measureText(actionText) / 2);
-            int top = (int) (getBounds().bottom - (13 * GraphicsView.getScaleY(context)));
+            int top = (int) (getBounds().bottom - (10 * GraphicsView.getScaleY(context)));
             canvas.drawText(actionText, left, top, paint);
         }
     }
@@ -101,8 +101,10 @@ public abstract class Card extends BitmapDrawable{
             }else{
                 paint.setAlpha(180);
             }
-            int iconWidth = (int)(100 * iconScale);
-            canvas.drawBitmap(Bitmap.createScaledBitmap(icon, iconWidth, iconWidth, true), getCenterX() - (iconWidth / 2), bounds.top + 55, paint);
+            int iconWidth = (int)(70 * iconScale * GraphicsView.getScaleX(context));
+            int iconHeight = (int)(70 * iconScale * GraphicsView.getScaleY(context));
+            int top = (int) (bounds.top + (40 * GraphicsView.getScaleY(context)));
+            canvas.drawBitmap(Bitmap.createScaledBitmap(icon, iconWidth, iconHeight, true), getCenterX() - (iconWidth / 2), top, paint);
         }
     }
 

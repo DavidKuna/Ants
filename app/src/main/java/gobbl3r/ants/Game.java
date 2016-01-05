@@ -3,7 +3,6 @@ package gobbl3r.ants;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.widget.Toast;
 
 import java.util.List;
 import java.util.Random;
@@ -52,8 +51,8 @@ public class Game {
         lastPlayedCard = null;
 		
 		// debug setting
-		player1.destroyCastle(28);
-		player2.buildCastle(68);
+		//player1.destroyCastle(28);
+		//player2.buildCastle(68);
 	}
 	
 	public Player getCurrentPlayer(){

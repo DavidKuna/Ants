@@ -225,7 +225,7 @@ public class GraphicsView extends View implements OnTouchListener {
         addCardToPackage(new CardKnight(this.getContext()), 4);
         addCardToPackage(new CardWall(this.getContext()), 4);
         addCardToPackage(new CardConjureCrystals(this.getContext()), 1);
-        addCardToPackage(new CardTower(this.getContext()), 2);
+        addCardToPackage(new CardTower(this.getContext()), 3);
         addCardToPackage(new CardArcher(this.getContext()), 5);
         addCardToPackage(new CardDragon(this.getContext()), 1);
         addCardToPackage(new CardUniversity(this.getContext()), 1);
@@ -456,7 +456,7 @@ public class GraphicsView extends View implements OnTouchListener {
 
     public static double getScaleX(Context context) {
         int dWidth	= context.getResources().getDisplayMetrics().widthPixels;
-        return (double)dWidth/GraphicsView.defaultHeight;
+        return (double)dWidth/GraphicsView.defaultWidth;
     }
 
     public static double getScaleY(Context context) {

@@ -16,7 +16,7 @@ ADDED from /home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/AndroidManifest
 		INJECTED from /home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/AndroidManifest.xml
 		INJECTED from /home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/AndroidManifest.xml
 	android:installLocation
-		ADDED from /home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/AndroidManifest.xml:4:5-45
+		ADDED from /home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/AndroidManifest.xml:4:5-35
 uses-sdk
 ADDED from /home/gobbl3r/AndroidStudioProjects/Ants/app/src/main/AndroidManifest.xml:8:5-10:41
 	android:targetSdkVersion
